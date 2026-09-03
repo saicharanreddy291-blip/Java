@@ -1,0 +1,16 @@
+T = int(input())
+
+for _ in range(T):
+    s = input().strip()
+    n = len(s)
+
+    # Ignore the middle character if length is odd
+    mid = n // 2
+
+    left = s[:mid]
+    right = s[(n + 1) // 2:]
+
+    if sorted(left) == sorted(right):
+        print("YES")
+    else:
+        print("NO")
